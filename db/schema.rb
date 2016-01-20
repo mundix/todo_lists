@@ -29,10 +29,10 @@ ActiveRecord::Schema.define(version: 20160120002417) do
     t.date     "due_date"
     t.string   "title"
     t.text     "description"
-    t.boolean  "complete"
+    t.boolean  "completed",    default: false
     t.integer  "todo_list_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
   end
 
   add_index "todo_items", ["todo_list_id"], name: "index_todo_items_on_todo_list_id"

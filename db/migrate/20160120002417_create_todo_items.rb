@@ -4,7 +4,7 @@ class CreateTodoItems < ActiveRecord::Migration
       t.date :due_date
       t.string :title
       t.text :description
-      t.boolean :complete
+      t.boolean :completed, default: false
       t.references :todo_list, index: true
 
       t.timestamps null: false
